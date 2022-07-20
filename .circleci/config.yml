@@ -15,8 +15,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Bonjour à tous!"
+          name: "Use echo"
+          command: |
+            echo 'Bonjour à tous !'
+            echo 'Nouveau pipeline dr mise en production'
       - run:
           name: "print interface"
           command: "ifconfig"
