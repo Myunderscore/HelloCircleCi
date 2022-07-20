@@ -46,7 +46,7 @@ workflows:
       - say-hello
       - Fetch-Code:
           requires:
-          - say-Hello
+          - say-hello
       - Using-Node:
           requires:
             - Fetch-Code
