@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Bonjour à tous!"
-       - run:
+      - run:
           name: "print interface"
           command: "ifconfig"
 
