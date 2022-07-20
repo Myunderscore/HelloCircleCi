@@ -35,9 +35,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: running the node container
-        command: |
-          node -v
+          name: running the node container
+          command: |
+            node -v
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
