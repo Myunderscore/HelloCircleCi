@@ -18,16 +18,15 @@ jobs:
           name: "Use echo"
           command: |
             echo 'Bonjour à tous !'
-            echo 'Nouveau pipeline dr mise en production'
+            echo 'Nouveau pipeline de mise en production'
       - run:
-          name: "print interface"
+          name: 'print interface'
           command: "ifconfig"
       - run: 
-          name: "third step"
+          name: 'third step'
           command: |
             ls -al
             echo '^^^The files in your repo^^^'
-      
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
