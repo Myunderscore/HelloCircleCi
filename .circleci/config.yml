@@ -31,7 +31,7 @@ jobs:
            echo '^^^Your new repo files ^^^^'
   Using-Node:
     docker:
-      - image: cimg/node: 17.4
+      - image: cimg/node:17.2
     steps:
       - checkout
       - run:
