@@ -18,7 +18,7 @@ jobs:
           name: "Say hello"
           command: "echo Bonjour à tous!"
        - run:
-          name: "Print interface"
+          name: "print interface"
           command: "ifconfig"
 
 # Invoke jobs via workflows
