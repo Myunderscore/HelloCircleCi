@@ -5,7 +5,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  test-checkout:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -15,38 +15,33 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Use echo"
+          name: "test checkout"
           command: |
-            echo 'Bonjour à tous !'
-            echo 'Nouveau pipeline de mise en production'
-  Fetch-Code:
-    docker:
-      - image: cimg/base:2021.04
-    steps:
-      - checkout
-      - run:
-         name: Getting the code
-         command: |
-           ls -la
-           echo '^^^Your new repo files ^^^^'
-  Using-Node:
-    docker:
-      - image: cimg/node:17.2
-    steps:
-      - checkout
-      - run:
-          name: running the node container
-          command: |
-            node -v
+            echo 'Voici le contenu de mon docker :'
+            pwd
+            ls -la
+  # Fetch-Code:
+    # docker:
+      # - image: cimg/base:2021.04
+    # steps:
+     #  - checkout
+      # - run:
+         # name: Getting the code
+         # command: |
+           # ls -la
+           #  echo '^^^Your new repo files ^^^^'
+  # Using-Node:
+    # docker:
+      # - image: cimg/node:17.2
+    # steps:
+      # - checkout
+      # - run:
+          # name: running the node container
+          # command: |
+            # node -v
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   example-workflow:
     jobs:
-      - say-hello
-      - Fetch-Code:
-          requires:
-          - say-hello
-      - Using-Node:
-          requires:
-            - Fetch-Code
+      - test-checkout
