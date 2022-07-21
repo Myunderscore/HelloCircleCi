@@ -22,7 +22,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - test
+      - checkout
       - run:
           name: "test job"
           command: |
