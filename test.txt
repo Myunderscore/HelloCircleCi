@@ -1,0 +1,4 @@
+Hello, we are in devops training.
+The program of the day is to test the pipeline with Github and CircleCi.
+Une seule brique ou plusieurs dans le workflow ?
+Checkout, build, test : 3 bricks for example.
